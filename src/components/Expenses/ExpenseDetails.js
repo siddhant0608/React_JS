@@ -1,4 +1,4 @@
-function ExpenseDetails(props) {
+const ExpenseDetails = (props) => {
   return (
     <div>
       <h2>{props.title}</h2>
