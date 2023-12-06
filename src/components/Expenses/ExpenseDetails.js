@@ -5,5 +5,5 @@ const ExpenseDetails = (props) => {
       <div>{props.amount}</div>
     </div>
   );
-}
+};
 export default ExpenseDetails;

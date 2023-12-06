@@ -37,9 +37,9 @@ const App = () => {
 
   const expenseItems = [];
   const addExpenseHandler = (expense) => {
-    const ExpenseData ={
+    const ExpenseData = {
       ...expense,
-      id: Math.random().toString()
+      id: Math.random().toString(),
     };
     console.log(ExpenseData);
   };
