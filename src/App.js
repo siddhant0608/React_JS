@@ -3,7 +3,7 @@ import ExpenseItem from "./components/Expenses/ExpenseItem";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpenses/NewExpense";
 
-const App= () => {
+const App = () => {
   const expenses = [
     {
       id: "e1",
@@ -36,6 +36,13 @@ const App= () => {
   ];
 
   const expenseItems = [];
+  const addExpenseHandler = (expense) => {
+    const ExpenseData ={
+      ...expense,
+      id: Math.random().toString()
+    };
+    console.log(ExpenseData);
+  };
 
   for (let i = 0; i < expenses.length; i++) {
     const expense = expenses[i];
@@ -51,9 +58,9 @@ const App= () => {
 
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onAddExpense={addExpenseHandler} />
       {/* {expenseItems} */}
-      <Expenses items={expenses}/>
+      <Expenses items={expenses} />
     </div>
   );
 
@@ -63,6 +70,6 @@ const App= () => {
   //   React.createElement("h2", {}, "Let's get started!"),
   //   React.createElement(Expenses,{items:expenses})
   // );
-}
+};
 
 export default App;
