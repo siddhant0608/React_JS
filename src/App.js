@@ -59,17 +59,9 @@ const App = () => {
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
-      {/* {expenseItems} */}
       <Expenses items={expenses} />
     </div>
   );
-
-  // return React.createElement(
-  //   "div",
-  //   {},
-  //   React.createElement("h2", {}, "Let's get started!"),
-  //   React.createElement(Expenses,{items:expenses})
-  // );
 };
 
 export default App;
