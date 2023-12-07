@@ -17,9 +17,17 @@ const Expenses = (props) => {
 
   let expensesContent = <p>No Expenses Found.</p>;
   let newExpenseContent = <p>Only single Expense here. Please add more...</p>;
-
   if (filteredExpenses.length > 0) {
     expensesContent = filteredExpenses.map((expense) => (
+      <ExpenseItem
+        key={expense.id}
+        title={expense.title}
+        amount={expense.amount}
+        date={expense.date}
+      />
+    ));
+  } else if (filteredExpenses.length === 1) {
+    newExpenseContent = filteredExpenses.map((expense) => (
       <ExpenseItem
         key={expense.id}
         title={expense.title}
